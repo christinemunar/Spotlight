@@ -21,6 +21,8 @@
 		BE2D29F41C76020F000702EC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2D29F31C76020F000702EC /* icon.png */; };
 		BE2D29FA1C767664000702EC /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2D29F91C767664000702EC /* lightbulb.png */; };
 		BE2D29FC1C7679F4000702EC /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2D29FB1C7679F4000702EC /* title.png */; };
+		BE2D29FE1C767DA4000702EC /* turnip.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2D29FD1C767DA4000702EC /* turnip.png */; };
+		BE2D2A001C767E11000702EC /* turnttext.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2D29FF1C767E11000702EC /* turnttext.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		BE2D29F31C76020F000702EC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../../Downloads/icon.png; sourceTree = "<group>"; };
 		BE2D29F91C767664000702EC /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lightbulb.png; path = ../../../../../Downloads/lightbulb.png; sourceTree = "<group>"; };
 		BE2D29FB1C7679F4000702EC /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title.png; path = ../../../../../title.png; sourceTree = "<group>"; };
+		BE2D29FD1C767DA4000702EC /* turnip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turnip.png; path = ../../../../../Downloads/turnip.png; sourceTree = "<group>"; };
+		BE2D29FF1C767E11000702EC /* turnttext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turnttext.png; path = ../../../../../Downloads/turnttext.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +93,9 @@
 				BE2D29D61C75ED9D000702EC /* LaunchScreen.storyboard */,
 				BE2D29F91C767664000702EC /* lightbulb.png */,
 				BE2D29FB1C7679F4000702EC /* title.png */,
+				BE2D29FD1C767DA4000702EC /* turnip.png */,
 				BE2D29F31C76020F000702EC /* icon.png */,
+				BE2D29FF1C767E11000702EC /* turnttext.png */,
 				BE2D29D91C75ED9D000702EC /* Info.plist */,
 			);
 			path = Spotlight;
@@ -161,6 +167,8 @@
 				BE2D29FA1C767664000702EC /* lightbulb.png in Resources */,
 				BE2D29D51C75ED9D000702EC /* Assets.xcassets in Resources */,
 				BE2D29D31C75ED9C000702EC /* Main.storyboard in Resources */,
+				BE2D2A001C767E11000702EC /* turnttext.png in Resources */,
+				BE2D29FE1C767DA4000702EC /* turnip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

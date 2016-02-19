@@ -83,6 +83,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="turnttext.png" id="ttS-mr-UqA">
+                                <rect key="frame" x="75" y="490" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb.png" id="MaV-P3-zY8">
+                                <rect key="frame" x="120" y="140" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="yRq-vr-ewm">
                                 <rect key="frame" x="49" y="254" width="222" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -90,11 +99,14 @@
                                     <action selector="sliderAction:" destination="3sX-Uu-htz" eventType="valueChanged" id="Ebk-GU-hES"/>
                                 </connections>
                             </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb.png" id="MaV-P3-zY8">
-                                <rect key="frame" x="120" y="140" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="44e-C9-5Ie">
+                                <rect key="frame" x="218" y="439" width="68" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
+                                <state key="normal" title="Mr. Turnip" image="turnip.png"/>
+                                <connections>
+                                    <action selector="turnupPressed:" destination="3sX-Uu-htz" eventType="touchUpInside" id="EEI-Rh-Pix"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10038060897435896" green="0.10038060897435896" blue="0.10038060897435896" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,6 +115,7 @@
                     <connections>
                         <outlet property="frequencySlider" destination="yRq-vr-ewm" id="HhY-Lu-uXh"/>
                         <outlet property="lightbulbImg" destination="MaV-P3-zY8" id="vS9-14-4DB"/>
+                        <outlet property="turnupBtn" destination="44e-C9-5Ie" id="6zK-tI-7sG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2x-Wm-ITR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,6 +145,8 @@
         <image name="background.jpg" width="1867" height="1400"/>
         <image name="lightbulb.png" width="256" height="256"/>
         <image name="title.png" width="1000" height="1000"/>
+        <image name="turnip.png" width="745" height="1071"/>
+        <image name="turnttext.png" width="640" height="115"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
 </document>

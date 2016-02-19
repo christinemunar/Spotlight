@@ -16,6 +16,11 @@ class FeaturesViewController: UIViewController {
 
     @IBOutlet weak var frequencySlider: UISlider!
     @IBOutlet weak var lightbulbImg: UIImageView!
+    @IBOutlet weak var turnupBtn: UIButton!
+    
+    var timer = NSTimer()
+    var counter = 0
+    var turnupOn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +50,47 @@ class FeaturesViewController: UIViewController {
             }
         }
     }
+
+    @IBAction func turnupPressed(sender: AnyObject) {
+        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        if (turnupOn == true) {
+            timer.invalidate()
+            turnupOn = false;
+            do {
+                try device.lockForConfiguration()
+                device.torchMode = AVCaptureTorchMode.Off
+                device.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
+        } else {
+            timer.invalidate()
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+            turnupOn = true;
+        }
+    }
     
-    
+    func timerAction() {
+        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        if (counter%2 == 0) {
+            do {
+                try device.lockForConfiguration()
+                try device.setTorchModeOnWithLevel(1.0)
+                device.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
+        } else {
+            do {
+                try device.lockForConfiguration()
+                device.torchMode = AVCaptureTorchMode.Off
+                device.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
+        }
+        ++counter
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
